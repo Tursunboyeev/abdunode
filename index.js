@@ -7,7 +7,8 @@ const bot = new TelegramBot(TOKEN, {polling: true});
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(msg.from.id, `Salom, ${ msg.from.first_name }!`);
+  bot.sendMessage(msg.from.id, `Iltimos, tilni tanlang.\n`
+    + 'Пожалуйста, выберите ваш язык.');
 });
 
 bot.onText(/\/love/, function onLoveText(msg) {
