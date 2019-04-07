@@ -40,3 +40,20 @@ bot.onText(/\/editable/, function onEditableText(msg) {
   };
   bot.sendMessage(msg.from.id, 'Original Text', opts);
 });
+
+// Handle callback queries
+bot.on('callback_query', function onCallbackQuery(callbackQuery) {
+  const action = callbackQuery.data;
+  const msg = callbackQuery.message;
+  const opts = {
+    chat_id: msg.chat.id,
+    message_id: msg.message_id,
+  };
+  let text;
+
+  if (action === 'edit') {
+    text = 'Edited Text';
+  }
+
+  bot.editMessageText(text, opts);
+});
