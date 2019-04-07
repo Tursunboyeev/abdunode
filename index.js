@@ -7,7 +7,7 @@ const bot = new TelegramBot(TOKEN, {polling: true});
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, 'Salom, ${msg.first_name}');
+  bot.sendMessage(chatId, 'Salom, $msg.from.first_name');
 });
 
 bot.onText(/\/love/, function onLoveText(msg) {
