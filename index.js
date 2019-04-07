@@ -6,6 +6,9 @@ const bot = new TelegramBot(TOKEN, {polling: true});
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
+  
+  const langset = {
+    
 
   bot.sendMessage(msg.from.id, `Iltimos, tilni tanlang.\n`
     + 'Пожалуйста, выберите ваш язык.');
