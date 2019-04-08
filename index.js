@@ -19,7 +19,7 @@ bot.onText(/\/love/, function onLoveText(msg) {
     reply_to_message_id: msg.message_id,
     reply_markup: JSON.stringify({
       keyboard: [
-        [':uz: O\'zbekcha'],
+        [':uz: Ozbekcha'],
         ['No, sorry there is another one...']
       ]
     })
