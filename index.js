@@ -32,8 +32,8 @@ bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
       resize_keyboard: true,
       one_time_keyboard: true,
       keyboard: [
-        ['\ud83d\udc68\ud83c\udffb\u200d\ud83c\udfeb Ustoz \ud83d\udc69\ud83c\udffc\u200d\ud83c\udfeb',
-         '\ud83d\udc68\ud83c\udffb\u200d\ud83c\udf93 O\'quvchi \ud83d\udc69\ud83c\udffb\u200d\ud83c\udf93']
+        ['\ud83d\udc68\ud83c\udffb\u200d\ud83c\udfeb Ustozman \ud83d\udc69\ud83c\udffc\u200d\ud83c\udfeb',
+         '\ud83d\udc68\ud83c\udffb\u200d\ud83c\udf93 O\'quvchiman \ud83d\udc69\ud83c\udffb\u200d\ud83c\udf93']
       ]
     })
   });
