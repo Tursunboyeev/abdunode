@@ -25,7 +25,8 @@ bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
   const chatId = msg.chat.id;
 
   bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
-    + 'Пожалуйста, выберите ваш язык.', {parse_mode: "Markdown"}, {
+    + '*Iltimos, savollarni diqqat bilan o\'qib javob bering.*\n\n'
+    + 'E\'lon qo\'shish uchun kerakli bo\'limni tanlang \ud83d\udc47\ud83c\udffb', {parse_mode: "Markdown"}, {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
       one_time_keyboard: true,
