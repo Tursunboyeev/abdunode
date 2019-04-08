@@ -11,6 +11,7 @@ bot.onText(/\/start/, (msg) => {
     + 'Пожалуйста, выберите ваш язык.', {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
+      one_time_keyboard: true,
       keyboard: [
         ['\ud83c\uddfa\ud83c\uddff O\'zbekcha'],
         ['\ud83c\uddf7\ud83c\uddfa Русcкий']
