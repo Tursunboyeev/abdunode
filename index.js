@@ -6,9 +6,6 @@ const bot = new TelegramBot(TOKEN, {polling: true});
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
-  
-  const langset = {
-    
 
   bot.sendMessage(msg.from.id, `Iltimos, tilni tanlang.\n`
     + 'Пожалуйста, выберите ваш язык.');
@@ -19,7 +16,7 @@ bot.onText(/\/love/, function onLoveText(msg) {
     reply_to_message_id: msg.message_id,
     reply_markup: JSON.stringify({
       keyboard: [
-        [':uz: Ozbekcha'],
+        [':uz: O\'zbekcha'],
         ['No, sorry there is another one...']
       ]
     })
