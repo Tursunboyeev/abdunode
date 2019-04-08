@@ -24,7 +24,7 @@ bot.onText(/\/start/, (msg) => {
 bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
   const chatId = msg.chat.id;
 
-  bot.sendMessage(msg.from.id, `Salom, **${ msg.from.first_name }**!\n\n`
+  bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
     + 'Пожалуйста, выберите ваш язык.', {parse_mode: "Markdown"}, {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
