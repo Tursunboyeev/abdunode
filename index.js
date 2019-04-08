@@ -7,6 +7,8 @@ const bot = new TelegramBot(TOKEN, {polling: true});
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
+  bot.sendMessage(msg.from.id, '@ustoztopbot ga xush kelibsiz!\n'
+    + 'Добро пожаловать в @ustoztopbot !');
   bot.sendMessage(msg.from.id, `Iltimos, tilni tanlang.\n`
     + 'Пожалуйста, выберите ваш язык.', {
     reply_markup: JSON.stringify({
