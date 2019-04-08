@@ -14,7 +14,7 @@ bot.onText(/\/start/, (msg) => {
 bot.onText(/\/love/, function onLoveText(msg) {
   const opts = {
     reply_markup: JSON.stringify({
-      keyboard: [
+      inline_keyboard: [
         ['\ud83c\uddfa\ud83c\uddff O\'zbekcha'],
         ['\ud83c\uddf7\ud83c\uddfa Русcкий']
       ]
