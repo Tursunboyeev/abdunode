@@ -21,17 +21,22 @@ bot.onText(/\/start/, (msg) => {
   });
 });
 
-bot.onText(/\/love/, function onLoveText(msg) {
-  const opts = {
+bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
+  const chatId = msg.chat.id;
+
+  bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
+    + 'Пожалуйста, выберите ваш язык.', {
     reply_markup: JSON.stringify({
+      resize_keyboard: true,
+      one_time_keyboard: true,
       keyboard: [
-        ['\ud83c\uddfa\ud83c\uddff O\'zbekcha'],
-        ['\ud83c\uddf7\ud83c\uddfa Русcкий']
+        ['\ud83c\uddfa\ud83c\uddff O\'zbekcha', '\ud83c\uddf7\ud83c\uddfa Русcкий']
       ]
     })
-  };
-  bot.sendMessage(msg.chat.id, 'Do you love me?', opts);
+  });
 });
+
+
 
 bot.onText(/\/editable/, function onEditableText(msg) {
   const opts = {
