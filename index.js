@@ -23,8 +23,11 @@ bot.onText(/\/start/, (msg) => {
 
 bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
   const chatId = msg.chat.id;
-  
-  const ustozoqituvchi = {
+
+  bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
+    + '*Iltimos, savollarni diqqat bilan o\'qib javob bering.*\n\n', {parse_mode: "Markdown"}
+  );
+  bot.sendMessage(msg.from.id, `E\'lon qo\'shish uchun kerakli bo\'limni tanlang \ud83d\udc47\ud83c\udffb', {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
       one_time_keyboard: true,
@@ -33,12 +36,7 @@ bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
          '\ud83d\udc68\ud83c\udffb\u200d\ud83c\udf93 O\'quvchi \ud83d\udc69\ud83c\udffb\u200d\ud83c\udf93']
       ]
     })
-  };
-
-  bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
-    + '*Iltimos, savollarni diqqat bilan o\'qib javob bering.*\n\n'
-    + 'E\'lon qo\'shish uchun kerakli bo\'limni tanlang \ud83d\udc47\ud83c\udffb', ustozoqituvchi, {parse_mode: "Markdown"}
-  );
+  });
 });
 
 
