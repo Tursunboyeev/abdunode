@@ -8,7 +8,14 @@ bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
 
   bot.sendMessage(msg.from.id, `Iltimos, tilni tanlang.\n`
-    + 'Пожалуйста, выберите ваш язык.');
+    + 'Пожалуйста, выберите ваш язык.', {
+    reply_markup: JSON.stringify({
+      inline_keyboard: [
+        [{ text: '\ud83c\uddfa\ud83c\uddff O\'zbekcha', callback_data: 'uzb' },
+         { text: '\ud83c\uddf7\ud83c\uddfa Русcкий', callback_data: 'rus' }]
+      ]
+    })
+  });
 });
 
 bot.onText(/\/love/, function onLoveText(msg) {
