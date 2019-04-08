@@ -13,7 +13,6 @@ bot.onText(/\/start/, (msg) => {
 
 bot.onText(/\/love/, function onLoveText(msg) {
   const opts = {
-    reply_to_message_id: msg.message_id,
     reply_markup: JSON.stringify({
       keyboard: [
         ['\ud83c\uddfa\ud83c\uddff O\'zbekcha'],
