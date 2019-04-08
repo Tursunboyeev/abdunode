@@ -26,7 +26,7 @@ bot.onText(/\ud83c\uddfa\ud83c\uddff O\'zbekcha/, (msg) => {
 
   bot.sendMessage(msg.from.id, `Salom, *${ msg.from.first_name }*!\n\n`
     + '*Iltimos, savollarni diqqat bilan o\'qib javob bering.*\n\n'
-    + `E\'lon qo\'shish uchun kerakli bo\'limni tanlang \ud83d\udc47\ud83c\udffb', {
+    + 'E\'lon qo\'shish uchun kerakli bo\'limni tanlang \ud83d\udc47\ud83c\udffb', {
     parse_mode: "Markdown",
     reply_markup: JSON.stringify({
       resize_keyboard: true,
